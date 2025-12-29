@@ -1,16 +1,14 @@
-import React from 'react'
+import { calculateInvestmentResults } from "../util/investment";
 
 const Results = ({ userInput }) => {
+    const investmentResults = calculateInvestmentResults(userInput);
+    console.log(investmentResults);
 
     return (
         <section id="results">
             <h2>Results</h2>
-            <p>{userInput.initialInvestment}</p>
-            <p>{userInput.annualInvestment}</p>
-            <p>{userInput.expectedReturn}</p>
-            <p>{userInput.duration}</p>
         </section>
-    )
-}
+    );
+};
 
-export default Results
+export default Results;
